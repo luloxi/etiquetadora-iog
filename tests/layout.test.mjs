@@ -58,6 +58,20 @@ test("font family and letter size from controls flow into the preview", () => {
   assert.equal(layout.lines.length, 2);
 });
 
+test("Shift+Enter newlines keep vertical gaps between words", () => {
+  const spaced = applyComposerState({ text: "Luciano\n\nOliva" });
+  assert.deepEqual(spaced.lines, splitNameLines("Luciano\n\nOliva"));
+  assert.equal(spaced.lines.length, 3);
+  assert.equal(spaced.lines[0], "Luciano");
+  assert.equal(spaced.lines[1], "");
+  assert.equal(spaced.lines[2], "Oliva");
+
+  const oneBreak = applyComposerState({ text: "Luciano\nOliva" });
+  assert.equal(oneBreak.lines.length, 2);
+  assert.equal(oneBreak.lines[0], "Luciano");
+  assert.equal(oneBreak.lines[1], "Oliva");
+});
+
 test("print @page CSS matches stock size", () => {
   const layout = applyComposerState();
   const expected = pageCss(layout.widthMm, layout.heightMm);

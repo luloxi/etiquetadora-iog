@@ -21,10 +21,15 @@ export const FONTS = [
 ];
 
 export function splitNameLines(text) {
-  const parts = String(text ?? "")
-    .trim()
-    .split(/\s+/)
-    .filter(Boolean);
+  const raw = String(text ?? "").replace(/\r\n/g, "\n");
+  // Shift+Enter inserts \n in the textarea; keep those breaks, including
+  // blank lines so extra Enter adds vertical space between words.
+  if (raw.includes("\n")) {
+    const lines = raw.split("\n").map((line) => line.replace(/[ \t]+/g, " ").trimEnd());
+    if (lines.every((line) => line.trim() === "")) return [""];
+    return lines;
+  }
+  const parts = raw.trim().split(/\s+/).filter(Boolean);
   if (parts.length >= 2) {
     return [parts.slice(0, -1).join(" "), parts[parts.length - 1]];
   }

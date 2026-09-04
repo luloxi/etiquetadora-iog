@@ -75,6 +75,14 @@ label.field {
   color: var(--muted);
 }
 
+.field-hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
 label.field input,
 label.field textarea,
 label.field select {
@@ -170,7 +178,7 @@ button.primary:hover { background: #2c2822; }
   margin: 0;
   text-align: center;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.25;
   white-space: pre-line;
   max-width: 140mm;
 }
