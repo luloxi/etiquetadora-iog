@@ -1,0 +1,9 @@
+{
+  "name": "impresora-chota",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/layout.test.mjs",
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1"
+  }
+}

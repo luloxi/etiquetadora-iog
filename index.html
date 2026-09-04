@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etiquetas 10×15 — 4BARCODE 4B-2054G</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style id="print-page">@page { size: 100mm 150mm; margin: 0; }</style>
+</head>
+<body>
+  <header class="top">
+    <h1>Imprimir etiqueta 10 × 15 cm</h1>
+    <a href="setup.html">Cómo configurar el driver (Windows y Mac)</a>
+  </header>
+
+  <main class="app">
+    <form class="panel" id="composer" onsubmit="return false;">
+      <h2>Componer</h2>
+
+      <label class="field">Texto
+        <textarea id="text" name="text" autocomplete="name"></textarea>
+      </label>
+
+      <label class="field">Tipografía
+        <select id="font" name="font"></select>
+      </label>
+
+      <label class="field">Tamaño de letras
+        <span class="row">
+          <input id="size" name="size" type="range" min="12" max="72" step="1">
+          <span id="size-value">28 pt</span>
+        </span>
+      </label>
+
+      <fieldset class="field" style="border:0;padding:0;margin:0 0 0.9rem;">
+        <legend style="font-size:0.85rem;color:var(--muted);">Colores</legend>
+        <div class="radios">
+          <label>
+            <input type="radio" name="invert" value="0">
+            Letras negras / fondo blanco
+          </label>
+          <label>
+            <input type="radio" name="invert" value="1">
+            Letras blancas / fondo negro
+          </label>
+        </div>
+      </fieldset>
+
+      <button class="primary" type="button" id="print">Imprimir</button>
+      <p class="hint">
+        La web no manda USB a la 4BARCODE. El botón abre el diálogo de impresión del sistema:
+        elegí <strong>4BARCODE 4B-2054G</strong>, papel <strong>100 × 150 mm</strong>, márgenes 0.
+        Si usás fondo negro, activá “gráficos de fondo”.
+      </p>
+    </form>
+
+    <section class="preview-stage">
+      <p class="stage-caption">Vista previa a tamaño real (10 cm × 15 cm), palabras a 90°</p>
+      <div class="label" id="label" aria-label="Vista previa de etiqueta 10 por 15 centímetros">
+        <p class="label-words" id="label-words"></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
