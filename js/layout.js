@@ -1,4 +1,4 @@
-/** Preview/print layout for 4BARCODE 4B-2054G labels. Used by the UI and tests. */
+/** Preview/print layout for Unnion LP4206D 10×15 cm labels. Used by the UI and tests. */
 
 export const DEFAULTS = {
   widthMm: 100,

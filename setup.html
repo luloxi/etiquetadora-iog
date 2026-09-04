@@ -3,55 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Configurar 4BARCODE 4B-2054G — Windows y Mac</title>
+  <title>Configurar Unnion LP4206D — Windows y Mac</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="top">
-    <h1>Driver y papel — 4BARCODE 4B-2054G</h1>
+    <h1>Driver y papel — Unnion LP4206D</h1>
     <a href="index.html">Volver a imprimir</a>
   </header>
 
   <article class="setup">
     <p>
-      Esta página es solo la guía. La impresora es una térmica USB
-      <strong>4BARCODE 4B-2054G</strong> (203 dpi, cabezal de 4"). Las etiquetas
-      son de <strong>10 cm de ancho × 15 cm de alto</strong> (100 × 150 mm).
+      Esta página es solo la guía. La impresora es una <strong>Unnion LP4206D</strong>
+      (térmica directa USB, 203 dpi, cabezal de 4" / 108 mm). Las etiquetas
+      son de <strong>10 cm de ancho × 15 cm de alto</strong> (100 × 150 mm), papel
+      térmico autoadhesivo: <em>no lleva ribbon</em>.
       Desde el navegador se imprime con el driver del sistema, no por USB remoto.
+    </p>
+
+    <p class="link-row">
+      <a class="btn-link" href="https://drive.google.com/drive/folders/1R4AVpFzwgTYClNcxOHVyc2KqmyZSLLeo?usp=sharing" target="_blank" rel="noopener">Descargar drivers LP4206D</a>
+      <a class="btn-link" href="https://listado.mercadolibre.com.ar/etiquetas-termicas-100x150" target="_blank" rel="noopener">Reponer etiquetas 10×15 en Mercado Libre</a>
+    </p>
+    <p class="hint" style="margin-top:0.4rem;">
+      El Drive de Unnion trae el instalador, Diagnostic Tool, Bartender y videos
+      (Drivers, Print From Driver, Mercado Libre). Si ese enlace falla, usá el
+      <a href="https://www.tscprinters.com/EN/support/support_download" target="_blank" rel="noopener">driver TSC</a>
+      (misma familia TSPL, 4").
     </p>
 
     <h2>Windows</h2>
     <ol>
-      <li>Enchufá el USB directo a la PC (evitá hubs) y prendé la impresora. El LED tiene que quedar en listo.</li>
-      <li>Si Windows no la instala solo, instalá el driver <strong>4BARCODE 4B-2054G</strong> del CD o de la web del fabricante (es un clon TSC / TSPL). En Impresoras y escáneres tiene que aparecer exactamente ese nombre, puerto USB.</li>
+      <li>Enchufá el USB directo a la PC (evitá hubs) y prendé la LP4206D. El LED tiene que quedar en listo (suele ser verde fijo).</li>
+      <li>Descargá e instalá el kit desde
+        <a href="https://drive.google.com/drive/folders/1R4AVpFzwgTYClNcxOHVyc2KqmyZSLLeo?usp=sharing" target="_blank" rel="noopener">este Drive de Unnion</a>.
+        Mirá el video <em>1-Instalación Drivers LP4206D</em>. En Impresoras y escáneres tiene que aparecer
+        <strong>LP4206D</strong> (o Unnion LP4206D), puerto USB.</li>
       <li>Si figura “sin conexión”, destildá <em>Usar impresora sin conexión</em> en la cola. En el Administrador de dispositivos no tiene que estar en gris (código 45 = cable desenchufado).</li>
-      <li>Creá un tamaño de papel de usuario: <strong>100 mm × 150 mm</strong> (ancho × alto). En las preferencias de la 4BARCODE, stock con gap (hueco), no continuo.</li>
-      <li>Al imprimir desde Chrome/Edge: impresora <strong>4BARCODE 4B-2054G</strong>, papel 100 × 150 mm, márgenes <strong>Ninguno</strong>, escala 100%, y “gráficos de fondo” si el fondo es negro.</li>
+      <li>Creá un tamaño de papel de usuario: <strong>100 mm × 150 mm</strong> (ancho × alto). En las preferencias, stock con gap (hueco entre etiquetas), no continuo. Sirve el Diagnostic Tool del mismo Drive para calibrar el gap.</li>
+      <li>Al imprimir desde Chrome/Edge: impresora <strong>LP4206D</strong>, papel 100 × 150 mm, márgenes <strong>Ninguno</strong>, escala 100%, y “gráficos de fondo” si el fondo es negro.</li>
     </ol>
 
     <h2>Mac</h2>
     <ol>
-      <li>USB a la Mac, impresora encendida. En Ajustes del Sistema → Impresoras y escáneres, agregala. Si no hay driver 4BARCODE, usá el de <strong>TSC</strong> equivalente (serie DA / TTP de 4") o el instalador “TSC Driver Wizard”.</li>
-      <li>En CUPS (<code>http://localhost:631</code>) la cola tiene que ser RAW o el driver TSC, no Generic PostScript: esta máquina habla TSPL, no PDF nativo.</li>
+      <li>USB a la Mac, impresora encendida. En Ajustes del Sistema → Impresoras y escáneres, agregala. La LP4206D habla TSPL: instalá el
+        <a href="https://www.tscprinters.com/EN/support/support_download" target="_blank" rel="noopener">driver TSC para macOS</a>
+        (serie DA / TTP de 4") o el instalador “TSC Driver Wizard”.</li>
+      <li>En CUPS (<code>http://localhost:631</code>) la cola tiene que ser RAW o el driver TSC, no Generic PostScript: no es una impresora PDF nativa.</li>
       <li>Creá un tamaño de papel personalizado: <strong>100 mm × 150 mm</strong> (Archivo → Ajustar página → Gestionar tamaños personalizados, o en el diálogo de impresión).</li>
       <li>Safari o Chrome: elegí esa impresora, el papel 100 × 150 mm, márgenes 0, previsualización al 100%. En Chrome, activá gráficos de fondo para el modo letras blancas.</li>
     </ol>
 
-    <h2>Cómo poner la hoja (rollo 10 × 15) para que salga alineada</h2>
+    <h2>Cómo poner el rollo 10 × 15 en la LP4206D</h2>
     <ol>
-      <li>Abrí la tapa. El rollo entra con la cara térmica (la que se pone oscura con la uña) hacia el cabezal, arriba en esta 4B-2054G.</li>
-      <li>El <strong>ancho del rollo es 10 cm</strong> (la medida del cabezal). Los 15 cm son el avance: cada etiqueta mide 150 mm de largo en el sentido en que sale el papel.</li>
-      <li>Ajustá las guías laterales contra los 10 cm, sin apretar de más. Si queda holgado, el texto se corre al costado.</li>
+      <li>Abrí la tapa. El rollo entra con la cara térmica (la que se pone oscura con la uña) hacia el cabezal, arriba. Es térmica directa: no hay cinta/ribbon.</li>
+      <li>El <strong>ancho del rollo es 10 cm</strong> (la medida del cabezal de 108 mm). Los 15 cm son el avance: cada etiqueta mide 150 mm de largo en el sentido en que sale el papel.</li>
+      <li>Ajustá las guias laterales contra los 10 cm, sin apretar de más. Si queda holgado, el texto se corre al costado.</li>
       <li>Pasá el papel por debajo de la guía y por encima del sensor de gap (el hueco entre etiquetas). Cerrá la tapa hasta que encastre.</li>
-      <li>Pulsá <strong>FEED</strong> una o dos veces: tiene que parar justo al inicio de una etiqueta, no a mitad. Si avanza de más o de menos, calibrá el sensor (mantené FEED al encender, o usá la herramienta Diagnostic del driver TSC/4BARCODE → gap detect).</li>
+      <li>Pulsá <strong>FEED</strong> una o dos veces: tiene que parar justo al inicio de una etiqueta, no a mitad. Si avanza de más o de menos, calibrá el sensor con el Diagnostic Tool del Drive (gap detect) o manteniendo FEED al encender.</li>
       <li>La primera impresión de prueba tiene que caer entera sobre el blanco de la etiqueta, no sobre el hueco. Si sale corrida, realineá el borde de la etiqueta con el cabezal y volvé a dar FEED.</li>
-      <li>Después de imprimir esta máquina a veces retrae (se “traga”) la etiqueta para dejar el hueco en el sensor. Si necesitás rasgarla, dale FEED o avanzá una en blanco desde el panel de la impresora.</li>
+      <li>Después de imprimir a veces retrae (se “traga”) la etiqueta para dejar el hueco en el sensor. Si necesitás rasgarla, dale FEED una vez.</li>
     </ol>
 
+    <h2>Se acabaron las etiquetas</h2>
     <p>
-      Palabras en la etiqueta van rotadas 90° respecto del avance, como en la última prueba
-      (nombre centrado en 10 × 15). Si el driver da vuelta toda la página, en el diálogo
-      de impresión desactivá “rotar / landscape” y dejá retrato 100 × 150 mm.
+      Pedí rollos <strong>térmicos autoadhesivos 100 × 150 mm</strong> (10 × 15 cm), buje 25 mm o 40 mm.
+      Buscá directo acá:
+    </p>
+    <p class="link-row">
+      <a class="btn-link" href="https://listado.mercadolibre.com.ar/etiquetas-termicas-100x150" target="_blank" rel="noopener">Ver etiquetas 10×15 en Mercado Libre</a>
+    </p>
+
+    <p>
+      Palabras en la etiqueta van rotadas 90° respecto del avance (nombre centrado en 10 × 15).
+      Si el driver da vuelta toda la página, en el diálogo de impresión desactivá “rotar / landscape”
+      y dejá retrato 100 × 150 mm.
     </p>
   </article>
 </body>
